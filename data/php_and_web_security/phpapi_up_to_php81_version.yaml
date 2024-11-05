@@ -1,16 +1,6 @@
 category: PHP API Up To PHP81 Version
 questions:
   -
-    uuid: 1eebf878-8b97-6494-ae5f-99d84c92580c
-    question: 'Which configuration file format can be used to define PHP constants as parameters?'
-    answers:
-      - { value: php, correct: true }
-      - { value: XML, correct: true }
-      - { value: Annotation, correct: false }
-      - { value: INI, correct: false }
-      - { value: YAML, correct: true }
-    help: 'https://symfony.com/doc/current/configuration.html#constants-as-parameters'
-  -
     uuid: 1eebf878-8b98-6740-a71f-99d84c92580c
     question: 'Which of the following is not a predefined PHP variable?'
     answers:
@@ -48,14 +38,6 @@ questions:
       - { value: '-1', correct: true }
     help: 'https://php.net/manual/en/language.operators.comparison.php'
   -
-    uuid: 1eebf878-8b9a-6428-aa7e-99d84c92580c
-    question: 'Regarding this URI : /example?tags.id=2 What will be the content of $request->query->all() ?'
-    answers:
-      - { value: "[ 'tags.id' => 2 ]", correct: false }
-      - { value: "[ 'tags_id' => 2 ]", correct: true }
-      - { value: "[ 'tags' => ['id' => 2] ]", correct: false }
-    help: 'https://github.com/symfony/symfony/issues/29664'
-  -
     uuid: 1eebf878-8b9a-6d88-9a1d-99d84c92580c
     question: 'Which major PHP version introduced the « traits » feature?'
     answers:
@@ -66,19 +48,6 @@ questions:
       - { value: 'PHP 5.6', correct: false }
       - { value: 'PHP 5.5', correct: false }
     help: 'https://php.net/manual/en/language.oop5.traits.php'
-  -
-    uuid: 1eebf878-8b9b-6e90-875a-99d84c92580c
-    question: 'Which of the following APIs are designed to be SAFE from SQL injections?'
-    answers:
-      - { value: 'Query methods on the Connection.', correct: false }
-      - { value: 'Doctrine\DBAL\Connection#update($table, $values, $where, $types)', correct: true }
-      - { value: 'Doctrine\DBAL\Connection#delete($table, $where, $types)', correct: true }
-      - { value: 'Doctrine\DBAL\Query\QueryBuilder#setFirstResult($offset)', correct: true }
-      - { value: 'The QueryBuilder API.', correct: false }
-      - { value: 'Doctrine\DBAL\Platforms\AbstractPlatform#modifyLimitQuery($sql, $limit, $offset)', correct: true }
-      - { value: 'Doctrine\DBAL\Connection#insert($table, $values, $types)', correct: true }
-      - { value: 'Doctrine\DBAL\Query\QueryBuilder#setMaxResults($limit)', correct: true }
-    help: 'https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/security.html#sql-injection-safe-and-unsafe-apis-for-user-input'
   -
     uuid: 1eebf878-8b9b-6f80-bc80-99d84c92580c
     question: "Which of the following statements best describes the purpose of PHP's extract() function? This function accepts an array as its first argument."
@@ -97,43 +66,6 @@ questions:
       - { value: str_split($string);, correct: false }
       - { value: strstr($string);, correct: false }
     help: 'https://www.php.net/manual/en/function.strtok.php'
-  -
-    uuid: 1eebf878-8b9c-6a02-9efa-99d84c92580c
-    question: 'By default, which of the following request parameters can be used with built-in providers for a login form?'
-    answers:
-      - { value: _remember_me, correct: false }
-      - { value: _token, correct: true }
-      - { value: _user, correct: false }
-      - { value: _password, correct: true }
-      - { value: _passwd, correct: false }
-      - { value: _username, correct: true }
-    help: 'https://symfony.com/doc/current/reference/configuration/security.html#form-login-configuration'
-  -
-    uuid: 1eebf878-8b9d-606a-916d-99d84c92580c
-    question: 'Could the current token be retrieved from Symfony\Component\Security\Core\Security ?'
-    answers:
-      - { value: 'Yes', correct: true }
-      - { value: 'No', correct: false }
-    help: 'https://symfony.com/doc/current/security.html#securing-other-services'
-  -
-    uuid: 1eebf878-8b9d-61f0-8520-99d84c92580c
-    question: 'What is the signature of the vote() method from VoterInterface?'
-    answers:
-      - { value: 'public function vote(TokenInterface $token, $subject, array $attributes)', correct: true }
-      - { value: 'public function vote(TokenInterface $token, array $attributes, $object)', correct: false }
-      - { value: 'public function vote(TokenInterface $token, $object, array $attributes)', correct: false }
-      - { value: 'public function vote(TokenInterface $token, array $attributes, $subject)', correct: false }
-    help: 'https://github.com/symfony/symfony/blob/6.4/src/Symfony/Component/Security/Core/Authorization/Voter/VoterInterface.php'
-  -
-    uuid: 1eebf878-8b9d-6506-af8c-99d84c92580c
-    question: 'Which class can be used to extracts security errors from a Request?'
-    answers:
-      - { value: AuthenticationUtils, correct: true }
-      - { value: FrameworkUtils, correct: false }
-      - { value: HttpUtils, correct: false }
-      - { value: SecurityUtils, correct: false }
-      - { value: RequestUtils, correct: false }
-    help: 'https://github.com/symfony/symfony/blob/6.4/src/Symfony/Component/Security/Http/Authentication/AuthenticationUtils.php'
   -
     uuid: 1eebf878-8ba0-6756-8594-99d84c92580c
     question: 'What is the short open tag for PHP?'
@@ -247,13 +179,6 @@ questions:
       - { value: 'The Service Priority List, a set of functions to register classes and objects as services and define their loading priority, for performance optimization purposes.', correct: false }
     help: 'https://www.php.net/manual/en/book.spl.php'
   -
-    uuid: 1eebf878-8ba3-6154-81ff-99d84c92580c
-    question: 'Is the __call feature enabled by default?'
-    answers:
-      - { value: 'No', correct: true }
-      - { value: 'Yes', correct: false }
-    help: 'https://symfony.com/doc/current/components/property_access/introduction.html#magic-call-method'
-  -
     uuid: 1eebf878-8ba3-653c-8129-99d84c92580c
     question: "Consider the following code snippet: trigger_error('This method is deprecated.'); Which of the following is valid way to catch and process errors that were triggered with the trigger_error() function?"
     answers:
@@ -291,15 +216,6 @@ questions:
       - { value: '$data = function ($content){ return (strtoupper(strip_tags(content)));};', correct: true }
     help: 'https://php.net/manual/en/book.json.php'
   -
-    uuid: 1eebf878-8ba3-6f78-8a74-99d84c92580c
-    question: 'Which interface should be implemented when putting together all the required parts (token, provider, listener) for a custom authentication system ?'
-    answers:
-      - { value: Symfony\Component\Security\Guard\GuardAuthenticatorInterface, correct: false }
-      - { value: Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface, correct: false }
-      - { value: Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListenerInterface, correct: false }
-      - { value: Symfony\Component\Security\Http\Authenticator\AbstractAuthenticator, correct: true }
-    help: 'https://symfony.com/doc/current/security/custom_authenticator.html'
-  -
     uuid: 1eebf878-8ba4-6dc4-8bee-99d84c92580c
     question: 'Which encryption means is used to secure credentials when authenticating an HTTP request with the HTTP Basic mechanism?'
     answers:
@@ -336,23 +252,6 @@ questions:
       - { value: 'PHP 5.5', correct: true }
     help: 'https://www.php.net/ChangeLog-5.php'
   -
-    uuid: 1eeda3fc-6f1f-6b00-ba24-216aef5bea70
-    question: 'What is the purpose of the Chain User Provider ?'
-    answers:
-      - { value: 'It combines two or more providers to create a new user provider. sorted they are looked one after the other until user is found', correct: true }
-      - { value: 'This user provider stores all user information in a configuration file, including their passwords.', correct: false }
-      - { value: 'User Access are stored in a Chain software like Stackifor.', correct: false }
-    help: 'https://symfony.com/doc/current/security/user_providers.html#chain-user-provider'
-  -
-    uuid: 1eedb041-7713-6f86-9b4d-9d3b2d641bb6
-    question: 'Why might you pass false to $security->logout(false) in the Security component?'
-    answers:
-      - { value: 'To disable CSRF protection', correct: true }
-      - { value: 'To disable the default redirection', correct: false }
-      - { value: 'To disable the firewall', correct: false }
-      - { value: 'To limit login attempts, preventing the user from logging in for 5 minutes', correct: false }
-    help: 'https://symfony.com/doc/current/security.html#logout-programmatically'
-  -
     uuid: 1eee6d98-7a23-6338-9026-cd57d9ba16db
     question: 'Where can be set an attribute whith readonly property ? in php8.1'
     answers:
@@ -369,3 +268,430 @@ questions:
       - { value: "rand()", correct: false }
       - { value: "lcg_value()", correct: false }
     help: 'https://www.php.net/manual/en/ref.random.php'
+  -
+    uuid: 1a2b3c4d-8f97-4a6b-bdf5-123456789abc
+    question: 'Which of the following functions can be used to check if a class exists in PHP?'
+    answers:
+      - { value: 'class_exists()', correct: true }
+      - { value: 'method_exists()', correct: false }
+      - { value: 'property_exists()', correct: false }
+      - { value: 'interface_exists()', correct: false }
+    help: 'https://php.net/manual/en/function.class-exists.php'
+  -
+    uuid: 1b2c3d4e-9a01-4b3e-bc23-23456789abcd
+    question: 'Does PHP support named arguments in function calls as of PHP 8.0?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/functions.arguments.php#functions.named-arguments'
+  -
+    uuid: 3d4e5f6a-b3c1-4d5e-abcd-456789abcdef
+    question: 'In PHP 8.1, which of the following is a new addition to support readonly properties?'
+    answers:
+      - { value: 'readonly', correct: true }
+      - { value: 'protected', correct: false }
+      - { value: 'private', correct: false }
+      - { value: 'public', correct: false }
+    help: 'https://php.net/manual/en/language.oop5.properties.php#language.oop5.readonly-properties'
+  -
+    uuid: 4e5f6a7b-c4d2-4e6f-abcd-56789abcdef0
+    question: 'Can you use "match" expressions for conditional evaluations starting from PHP 8.0?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/control-structures.match.php'
+  -
+    uuid: 6a7b8c9d-e6f4-4a7b-cdef-789abcdef012
+    question: 'Which of the following functions in PHP is used to compare two strings in a constant-time manner?'
+    answers:
+      - { value: 'hash_equals()', correct: true }
+      - { value: 'strcmp()', correct: false }
+      - { value: 'strtolower()', correct: false }
+      - { value: 'substr_compare()', correct: false }
+    help: 'https://php.net/manual/en/function.hash-equals.php'
+  -
+    uuid: 8c9d0e1f-a6b4-4c9d-def0-901abcdef234
+    question: 'Does PHP 8.1 allow for intersection types?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/language.types.declarations.php#language.types.declarations.composite'
+  -
+    uuid: 9d0e1f2a-b5c6-4d0e-fabc-012abcdef345
+    question: 'Which PHP function is used to retrieve the last inserted ID in a PDO database connection?'
+    answers:
+      - { value: 'lastInsertId()', correct: true }
+      - { value: 'insertId()', correct: false }
+      - { value: 'getLastId()', correct: false }
+      - { value: 'lastId()', correct: false }
+    help: 'https://php.net/manual/en/pdo.lastinsertid.php'
+  -
+    uuid: 1f2a3b4c-d7e8-4f1a-bcde-2345abcdef678
+    question: 'In PHP, which function would you use to get a list of all declared classes?'
+    answers:
+      - { value: 'get_declared_classes()', correct: true }
+      - { value: 'get_loaded_classes()', correct: false }
+      - { value: 'get_classes()', correct: false }
+      - { value: 'class_list()', correct: false }
+    help: 'https://php.net/manual/en/function.get-declared-classes.php'
+  -
+    uuid: 2a3b4c5d-e8f9-4b2c-defa-3456abcdef789
+    question: 'Does PHP have a built-in function for array sorting that maintains key-value association?'
+    answers:
+      - { value: 'Yes, asort()', correct: true }
+      - { value: 'Yes, sort()', correct: false }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/function.asort.php'
+  -
+    uuid: b1a2c3d4-1f97-4e8b-ab01-234567890bcd
+    question: 'In PHP, what is the behavior of the spaceship operator (`<=>`) when comparing a number and a string containing the same numeric value?'
+    answers:
+      - { value: 'Returns 0, since both values are numerically equal', correct: true }
+      - { value: 'Throws an error because of incompatible types', correct: false }
+      - { value: 'Performs a lexicographical comparison', correct: false }
+      - { value: 'Returns -1, as numeric values are less than strings', correct: false }
+    help: 'https://php.net/manual/en/migration70.new-features.php#migration70.new-features.spaceship'
+  -
+    uuid: e4f5a6b7-4h00-7h1e-de04-567890123efg
+    question: 'In PHP 8.2, which of the following array functions will respect key order when sorting in ascending order?'
+    answers:
+      - { value: 'ksort()', correct: true }
+      - { value: 'asort()', correct: true }
+      - { value: 'sort()', correct: false }
+      - { value: 'rsort()', correct: false }
+    help: 'https://php.net/manual/en/array.sorting.php'
+  -
+    uuid: g6b7c8d9-6j02-9j3g-fg06-789012345ghj
+    question: 'What will be the result of `assert("5" === 5);` in PHP if assertions are enabled and configured to throw exceptions?'
+    answers:
+      - { value: 'An assertion error will be thrown', correct: true }
+      - { value: 'No error, as it performs a type-coerced comparison', correct: false }
+      - { value: 'Returns true and proceeds without an error', correct: false }
+      - { value: 'PHP will stop execution with a fatal error', correct: false }
+    help: 'https://php.net/manual/en/function.assert.php'
+  -
+    uuid: i8d9e0f1-8l04-1l5i-hi08-901234567jkl
+    question: 'Which PHP function is used to encode binary data in a way that is safe for HTML display and URL encoding?'
+    answers:
+      - { value: 'base64_encode()', correct: true }
+      - { value: 'urlencode()', correct: false }
+      - { value: 'htmlentities()', correct: false }
+      - { value: 'bin2hex()', correct: false }
+    help: 'https://php.net/manual/en/function.base64-encode.php'
+  -
+    uuid: j9e0f1g2-9m05-2m6j-ij09-012345678klm
+    question: 'What PHP function can be used to safely compare two binary strings in a constant-time manner, preventing timing attacks?'
+    answers:
+      - { value: 'hash_equals()', correct: true }
+      - { value: 'strcmp()', correct: false }
+      - { value: 'crypt()', correct: false }
+      - { value: 'md5()', correct: false }
+    help: 'https://php.net/manual/en/function.hash-equals.php'
+  -
+    uuid: l1g2h3i4-1o07-4o8l-kl11-234567890mno
+    question: 'In PHP, which constant represents the path to the current file and changes as the file is included?'
+    answers:
+      - { value: '__FILE__', correct: true }
+      - { value: '__DIR__', correct: false }
+      - { value: '__LINE__', correct: false }
+      - { value: '__FUNCTION__', correct: false }
+    help: 'https://php.net/manual/en/language.constants.predefined.php'
+  -
+    uuid: m2h3i4j5-2p08-5p9m-lm12-345678901opq
+    question: 'What will the `get_declared_classes()` function return when used in a namespace?'
+    answers:
+      - { value: 'All declared classes, including those in the global and current namespace', correct: true }
+      - { value: 'Only classes declared in the current namespace', correct: false }
+      - { value: 'Classes declared since the function was called', correct: false }
+      - { value: 'Classes declared in the current file only', correct: false }
+    help: 'https://php.net/manual/en/function.get-declared-classes.php'
+  -
+    uuid: o4j5k6l7-4r10-7r1o-op14-567890123qrs
+    question: 'Which of the following methods in the `ArrayObject` class allows objects to be serialized correctly for JSON encoding?'
+    answers:
+      - { value: 'jsonSerialize()', correct: true }
+      - { value: 'serialize()', correct: false }
+      - { value: '__toString()', correct: false }
+      - { value: 'getArrayCopy()', correct: false }
+    help: 'https://php.net/manual/en/class.arrayobject.php'
+  -
+    uuid: p5k6l7m8-5s11-8s2p-qr15-678901234rst
+    question: 'In PHP, how does the `??=` operator behave when used on a variable?'
+    answers:
+      - { value: 'Assigns the right-hand value to the variable only if it is null', correct: true }
+      - { value: 'Assigns the right-hand value if the variable is empty', correct: false }
+      - { value: 'Overwrites the variable with the right-hand value', correct: false }
+      - { value: 'Throws an error if the variable is not null', correct: false }
+    help: 'https://php.net/manual/en/language.operators.assignment.php'
+  -
+    uuid: r7m8n9o0-7u13-0u4r-tu17-890123456tuv
+    question: 'What is the behavior of `sprintf("%.2f", 0.0005)` in PHP?'
+    answers:
+      - { value: 'It rounds up to 0.01', correct: true }
+      - { value: 'It rounds down to 0.00', correct: false }
+      - { value: 'Throws an error', correct: false }
+      - { value: 'Returns 0.0005', correct: false }
+    help: 'https://php.net/manual/en/function.sprintf.php'
+  -
+    uuid: t9o0p1q2-9w15-2w6t-vw19-012345678wxy
+    question: 'In PHP, which function can be used to retrieve an array of the parameters of a given function?'
+    answers:
+      - { value: 'ReflectionFunction::getParameters()', correct: true }
+      - { value: 'func_get_args()', correct: false }
+      - { value: 'get_defined_vars()', correct: false }
+      - { value: 'func_num_args()', correct: false }
+    help: 'https://php.net/manual/en/class.reflectionfunction.php'
+  -
+    uuid: v1q2r3s4-1y17-4y8v-yz21-234567890yz0
+    question: 'What does `ini_get("display_errors")` return if error display is disabled in PHP?'
+    answers:
+      - { value: 'An empty string', correct: true }
+      - { value: 'false', correct: false }
+      - { value: 'null', correct: false }
+      - { value: '0', correct: false }
+    help: 'https://php.net/manual/en/function.ini-get.php'
+  -
+    uuid: x3s4t5u6-3a19-6a0x-aa23-456789012123
+    question: 'What does `FILTER_SANITIZE_EMAIL` in PHP do to an invalid email string?'
+    answers:
+      - { value: 'Removes invalid characters without validating the email format', correct: true }
+      - { value: 'Rejects the string if it is invalid', correct: false }
+      - { value: 'Formats it to a standard email format', correct: false }
+      - { value: 'Throws an error for invalid email syntax', correct: false }
+    help: 'https://php.net/manual/en/filter.filters.sanitize.php'
+  -
+    uuid: y4t5u6v7-4b20-7b1y-bb24-567890123234
+    question: 'Which PHP function would best handle precision loss for financial calculations?'
+    answers:
+      - { value: 'bcmul()', correct: true }
+      - { value: 'round()', correct: false }
+      - { value: 'floor()', correct: false }
+      - { value: 'ceil()', correct: false }
+    help: 'https://php.net/manual/en/book.bc.php'
+  -
+    uuid: f8g9h0i1-1a01-2b02-cd01-678901234dfe
+    question: 'Can a PHP class implement multiple interfaces?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/language.oop5.interfaces.php'
+  -
+    uuid: e8f9g0h1-2b02-3c03-df02-789012345efg
+    question: 'Does the `yield` keyword in PHP automatically pause the function and maintain state until the next call?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/language.generators.syntax.php'
+  -
+    uuid: h9i0j1k2-3c03-4d04-ef03-890123456ghi
+    question: 'In PHP, can a function argument have a default value of `null`?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/functions.arguments.php'
+  -
+    uuid: k2l3m4n5-4d04-5e05-gh04-901234567ijk
+    question: 'Does PHP throw an error when comparing a `string` to an `int` using the strict comparison (`===`) operator?'
+    answers:
+      - { value: 'Yes', correct: false }
+      - { value: 'No', correct: true }
+    help: 'https://php.net/manual/en/language.operators.comparison.php'
+  -
+    uuid: m3n4o5p6-5e05-6f06-hi05-123456789jkl
+    question: 'Can PHP `trait` methods be overridden by the implementing class?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/language.oop5.traits.php'
+  -
+    uuid: p6q7r8s9-7g07-8h08-jk07-345678901mno
+    question: 'Does the `session_start()` function in PHP require session cookies to be enabled?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/function.session-start.php'
+  -
+    uuid: q7r8s9t0-8h08-9i09-kl08-456789012nop
+    question: 'Is it possible to declare a class as `final` to prevent inheritance in PHP?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/language.oop5.final.php'
+  -
+    uuid: s9t0u1v2-0j10-1k11-mn10-678901234pqr
+    question: 'Does PHP provide a built-in function to hash passwords securely?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/function.password-hash.php'
+  -
+    uuid: t0u1v2w3-1k11-2l12-no11-789012345qrs
+    question: 'Which function is used to create a global variable within a function in PHP?'
+    answers:
+      - { value: 'global', correct: true }
+      - { value: 'static', correct: false }
+      - { value: 'const', correct: false }
+      - { value: 'define', correct: false }
+    help: 'https://php.net/manual/en/language.variables.scope.php'
+  -
+    uuid: v2w3x4y5-3m13-4n14-pq13-901234567stu
+    question: 'Does PHP 8.1 introduce read-only properties?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/migration81.new-features.php'
+  -
+    uuid: w3x4y5z6-4n14-5o15-qr14-012345678uvw
+    question: 'Which of the following PHP functions is used to filter a string to remove all HTML and PHP tags?'
+    answers:
+      - { value: 'strip_tags()', correct: true }
+      - { value: 'htmlentities()', correct: false }
+      - { value: 'htmlspecialchars()', correct: false }
+      - { value: 'trim()', correct: false }
+    help: 'https://php.net/manual/en/function.strip-tags.php'
+  -
+    uuid: x4y5z6a7-5o15-6p16-rs15-123456789vwx
+    question: 'Can the `__invoke()` magic method in PHP be called directly by using an object as a function?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/language.oop5.magic.php#object.invoke'
+  -
+    uuid: z6a7b8c9-7q17-8r18-tu17-345678901xyz
+    question: 'Does PHP support the use of type declarations for class properties as of PHP 7.4?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/language.oop5.properties.php'
+  -
+    uuid: a7b8c9d0-8r18-9s19-uv18-456789012yz0
+    question: 'Which PHP operator allows the assignment of a variable only if it is currently null?'
+    answers:
+      - { value: '??=', correct: true }
+      - { value: '?:', correct: false }
+      - { value: '??', correct: false }
+      - { value: '->', correct: false }
+    help: 'https://php.net/manual/en/language.operators.assignment.php'
+  -
+    uuid: b8c9d0e1-9s19-0t20-vw19-567890123yz1
+    question: 'Is `filter_var` used to both validate and sanitize user input in PHP?'
+    answers:
+      - { value: 'Yes', correct: true }
+      - { value: 'No', correct: false }
+    help: 'https://php.net/manual/en/function.filter-var.php'
+  -
+    uuid: 5a67b89c-1f01-3g23-hi01-901234567abc
+    question: 'Which of the following functions can be used to include a PHP file within another PHP file?'
+    answers:
+      - { value: 'require', correct: true }
+      - { value: 'require_once', correct: true }
+      - { value: 'include', correct: true }
+      - { value: 'include_once', correct: true }
+      - { value: 'import', correct: false }
+    help: 'https://php.net/manual/en/function.require.php'
+  -
+    uuid: 6b78c90d-2f02-4h34-ij02-012345678bcd
+    question: 'Which PHP function(s) can be used to serialize an object into a string?'
+    answers:
+      - { value: 'serialize()', correct: true }
+      - { value: 'json_encode()', correct: true }
+      - { value: 'base64_encode()', correct: false }
+      - { value: 'convert_to_string()', correct: false }
+    help: 'https://php.net/manual/en/function.serialize.php'
+  -
+    uuid: 7c89d01e-3g03-5i45-jk03-123456789cde
+    question: 'Which of these functions are used for managing sessions in PHP?'
+    answers:
+      - { value: 'session_start()', correct: true }
+      - { value: 'session_destroy()', correct: true }
+      - { value: 'session_set_save_handler()', correct: true }
+      - { value: 'session_write_close()', correct: true }
+      - { value: 'session_run()', correct: false }
+    help: 'https://php.net/manual/en/ref.session.php'
+  -
+    uuid: 8d90e12f-4h04-6j56-kl04-234567890def
+    question: 'Which of the following PHP methods are magic methods?'
+    answers:
+      - { value: '__construct()', correct: true }
+      - { value: '__invoke()', correct: true }
+      - { value: '__sleep()', correct: true }
+      - { value: '__autoload()', correct: true }
+      - { value: '__run()', correct: false }
+    help: 'https://php.net/manual/en/language.oop5.magic.php'
+  -
+    uuid: 0f12g34h-6j06-8l78-no06-456789012fgh
+    question: 'Which PHP functions can be used to end a script execution?'
+    answers:
+      - { value: 'exit()', correct: true }
+      - { value: 'die()', correct: true }
+      - { value: 'end()', correct: false }
+      - { value: 'halt()', correct: false }
+    help: 'https://php.net/manual/en/function.exit.php'
+  -
+    uuid: 1g23h45i-7k07-9m89-op07-567890123ghi
+    question: 'Which of the following PHP functions are used for string manipulation?'
+    answers:
+      - { value: 'str_replace()', correct: true }
+      - { value: 'substr()', correct: true }
+      - { value: 'strlen()', correct: true }
+      - { value: 'trim()', correct: true }
+      - { value: 'intval()', correct: false }
+    help: 'https://php.net/manual/en/ref.strings.php'
+  -
+    uuid: 3i45j67k-9m09-1o01-qr09-789012345ijk
+    question: 'Which PHP operators can be used for bitwise operations?'
+    answers:
+      - { value: '&', correct: true }
+      - { value: '|', correct: true }
+      - { value: '^', correct: true }
+      - { value: '~', correct: true }
+      - { value: '&&', correct: false }
+    help: 'https://php.net/manual/en/language.operators.bitwise.php'
+  -
+    uuid: 6l78m90n-2p12-4r34-tu12-012345678lmn
+    question: 'Which of the following functions are used to modify array structures in PHP?'
+    answers:
+      - { value: 'array_merge()', correct: true }
+      - { value: 'array_filter()', correct: true }
+      - { value: 'array_push()', correct: true }
+      - { value: 'in_array()', correct: false }
+      - { value: 'count()', correct: false }
+    help: 'https://php.net/manual/en/ref.array.php'
+  -
+    uuid: 7m89n01o-3q23-5s45-uv13-123456789mno
+    question: 'Which PHP functions are used to handle errors?'
+    answers:
+      - { value: 'set_error_handler()', correct: true }
+      - { value: 'error_reporting()', correct: true }
+      - { value: 'restore_error_handler()', correct: true }
+      - { value: 'handle_error()', correct: false }
+      - { value: 'log_error()', correct: false }
+    help: 'https://php.net/manual/en/ref.errorfunc.php'
+  -
+    uuid: 8n01o12p-4r34-6t56-vw14-234567890nop
+    question: 'Which of these PHP functions can retrieve metadata about functions?'
+    answers:
+      - { value: 'function_exists()', correct: true }
+      - { value: 'get_defined_functions()', correct: true }
+      - { value: 'get_class_methods()', correct: false }
+      - { value: 'get_included_files()', correct: false }
+    help: 'https://php.net/manual/en/ref.function.php'
+  -
+    uuid: 9o12p23q-5s45-7u67-wx15-345678901opq
+    question: 'Which of these PHP methods are used for object serialization?'
+    answers:
+      - { value: '__sleep()', correct: true }
+      - { value: '__wakeup()', correct: true }
+      - { value: '__serialize()', correct: true }
+      - { value: '__destruct()', correct: false }
+      - { value: '__construct()', correct: false }
+    help: 'https://php.net/manual/en/language.oop5.magic.php'
+  -
+    uuid: 0p23q34r-6t56-8v78-xy16-456789012pqr
+    question: 'Which PHP functions are used to manage cookies?'
+    answers:
+      - { value: 'setcookie()', correct: true }
+      - { value: 'setrawcookie()', correct: true }
+      - { value: 'getcookie()', correct: false }
+      - { value: 'cookie_exists()', correct: false }
+    help: 'https://php.net/manual/en/function.setcookie.php'
